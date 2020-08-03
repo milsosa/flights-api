@@ -13,6 +13,7 @@
     "lint:fix": "eslint --fix ./src --ext .ts",
     "start:dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
     "test": "jest",
+    "coverage": "jest --coverage",
     "tsc": "tsc"
   },
   "dependencies": {
