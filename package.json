@@ -1,0 +1,11 @@
+{
+  "name": "flights-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Flights information API",
+  "keywords": [],
+  "license": "ISC",
+  "author": "Milton Sosa <sosamilton19@gmail.com>",
+  "scripts": {},
+  "dependencies": {}
+}
