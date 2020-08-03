@@ -1,0 +1,7 @@
+.*
+.git
+node_modules
+coverage
+src
+jest.config.js
+tsconfig.js
