@@ -1,17 +1,13 @@
 import Dotenv from 'dotenv';
 import type { DotenvParseOutput } from 'dotenv';
-import * as readPkg from 'read-pkg';
 
 import ConfigError from './errors/config.error';
-
-const { version } = readPkg.sync();
 
 class Config {
   private config: DotenvParseOutput;
 
   constructor(configFilePath = './.env') {
-    const loadedConfig = Config.loadConfig(configFilePath);
-    this.config = { ...loadedConfig, app_version: version };
+    this.config = Config.loadConfig(configFilePath);
   }
 
   public get(property: string): string {
