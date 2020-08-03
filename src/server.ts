@@ -4,6 +4,8 @@ import Vision from '@hapi/vision';
 import HapiSwagger from 'hapi-swagger';
 import Config from './config';
 import Logger from './logger';
+import FlighsRoutes from './api/flights/flights.routes';
+import FlightsService from './services/flights.service';
 
 class Server {
   private static instace: Hapi.Server;
@@ -31,6 +33,9 @@ class Server {
       },
     ]);
 
+    Server.instace.route(FlighsRoutes);
+
+    await FlightsService.init();
 
     await Server.instace.start();
 
